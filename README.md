@@ -1,6 +1,23 @@
 Modular OSGi applications with Apache Karaf
 ===========================================
 
+Step-by-step branches
+---------------------
+
+You can fallow this tutorial step by step by checking out the branches:
+
+~~~
+  01-java2days-bundle
+  02-blueprint-bundle
+  03-api-and-command
+  04-karaf-features
+  05-karaf-assembly
+  06-jax-rs
+  07-cdi-with-jax-rs
+  master
+~~~
+*master* branch contains the latest code.
+
 Commands
 --------
 
@@ -20,7 +37,7 @@ Note: You can find a list of archetypes on [Maven Central](http://search.maven.o
 
 In Apache Karaf you can install the java2days features with:
 ~~~
-    feature:repo-add mvn:ieugen.java2days/java2days-feature-bundle/1.0-SNAPSHOT/xml/features
+feature:repo-add mvn:ieugen.java2days/java2days-feature-bundle/1.0-SNAPSHOT/xml/features
 ~~~
 
-http://localhost:8181/services/greet?name=Eugen
+Sample JAX-RS service published via this url (after step 06) [http://localhost:8181/services/greet?name=Eugen](http://localhost:8181/services/greet?name=Eugen)
