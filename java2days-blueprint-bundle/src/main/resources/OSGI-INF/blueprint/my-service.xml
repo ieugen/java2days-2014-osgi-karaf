@@ -17,8 +17,17 @@
 -->
 <blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0" default-activation="lazy">
 
-    <bean id="serviceBean" class="ieugen.java2days.MyServiceImpl"/>
+    <bean id="serviceBean" class="ieugen.java2days.sample.MyServiceImpl"/>
 
-    <service ref="serviceBean" interface="ieugen.java2days.MyService"/>
+    <service ref="serviceBean" interface="ieugen.java2days.sample.MyService"/>
+
+    <bean id="morningGreet" class="ieugen.java2days.greeting.api.impl.MorningGreeter"/>
+
+    <!-- here we register the bean in the OSGi registry using Blueprint XML -->
+    <service ref="morningGreet" interface="ieugen.java2days.greeting.api.Greeter">
+        <service-properties>
+            <entry key="timeOfDay" value="morning"/>
+        </service-properties>
+    </service>
 
 </blueprint>

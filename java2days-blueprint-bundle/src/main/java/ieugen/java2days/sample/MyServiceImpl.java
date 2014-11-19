@@ -14,10 +14,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package ieugen.java2days;
+package ieugen.java2days.sample;
 
-public interface MyService {
+public class MyServiceImpl implements MyService {
     
-    public String echo(String message);
+    public String echo(String message) {
+        return "Echo processed: " + message;
+    }
     
 }

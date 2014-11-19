@@ -27,14 +27,27 @@
   </parent>
 
     <groupId>ieugen.java2days</groupId>
-    <artifactId>java2days-blueprint-bundle</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>java2days-command-bundle</artifactId>
     <packaging>bundle</packaging>
 
-    <name>java2days-blueprint-bundle Blueprint Bundle</name>
-    <description>java2days-blueprint-bundle OSGi blueprint bundle project.</description>
+    <name>Apache Karaf :: Shell greeting:greet Commands</name>
+
+    <description>Provides the OSGi greeting commands</description>
 
     <dependencies>
+        <dependency>
+            <groupId>org.apache.karaf.shell</groupId>
+            <artifactId>org.apache.karaf.shell.core</artifactId>
+            <version>4.0.0.M1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.core</artifactId>
+            <version>5.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>ieugen.java2days</groupId>
             <artifactId>java2days-api</artifactId>
@@ -45,12 +58,28 @@
             <groupId>org.osgi</groupId>
             <artifactId>org.osgi.compendium</artifactId>
             <version>5.0.0</version>
+            <scope>provided</scope>
         </dependency>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <inherited>true</inherited>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
@@ -59,10 +88,8 @@
                 <configuration>
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-                        <Bundle-Version>${project.version}</Bundle-Version>
-                        <Export-Package>ieugen.java2days*;version=${project.version}</Export-Package>
-                        <Import-Package>*</Import-Package>
-                        <_dsannotations>*</_dsannotations>
+                        <Export-Package>ieugen.java2days*;version=${project.version};-noimport:=true</Export-Package>
+                        <Karaf-Commands>ieugen.java2days*</Karaf-Commands>
                     </instructions>
                 </configuration>
             </plugin>
