@@ -28,7 +28,7 @@
         <bundle>mvn:ieugen.java2days/java2days-blueprint-bundle/${project.version}</bundle>
     </feature>
 
-    <feature name="java2days-command">
+    <feature name="java2days-command" description="Adds commands support" version="${project.version}">
         <feature>java2days-app</feature>
         <bundle>mvn:ieugen.java2days/java2days-command-bundle/${project.version}</bundle>
     </feature>
