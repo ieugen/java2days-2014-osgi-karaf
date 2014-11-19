@@ -11,9 +11,9 @@ To build a bundle project with maven use this archetype:
     -DarchetypeArtifactId=karaf-bundle-archetype\
     -DarchetypeVersion=4.0.0.M1\
     -DgroupId=ieugen.java2days\
-    -DartifactId=java2days-jaxrs-bundle\
+    -DartifactId=java2days-cdi-bundle\
     -Dversion=1.0-SNAPSHOT\
-    -Dpackage=ieugen.java2days.rest
+    -Dpackage=ieugen.java2days.cdi
 ~~~
 
 Note: You can find a list of archetypes on [Maven Central](http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22org.apache.karaf.archetypes%22) search for karaf archetypes.

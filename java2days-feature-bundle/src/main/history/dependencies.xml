@@ -4,10 +4,13 @@
         <feature prerequisite="false" dependency="false">java2days-app</feature>
         <feature prerequisite="false" dependency="false">jax-rs-connector</feature>
         <feature prerequisite="false" dependency="false">jax-rs-provider-moxy</feature>
+        <feature prerequisite="false" dependency="false">pax-cdi-1.1-weld</feature>
+        <feature prerequisite="false" dependency="false">pax-http-whiteboard</feature>
         <feature prerequisite="false" dependency="false">scr</feature>
         <bundle>mvn:ieugen.java2days/java2days-api/1.0-SNAPSHOT</bundle>
         <bundle>mvn:ieugen.java2days/java2days-blueprint-bundle/1.0-SNAPSHOT</bundle>
         <bundle>mvn:ieugen.java2days/java2days-bundle/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:ieugen.java2days/java2days-cdi-bundle/1.0-SNAPSHOT</bundle>
         <bundle>mvn:ieugen.java2days/java2days-command-bundle/1.0-SNAPSHOT</bundle>
         <bundle>mvn:ieugen.java2days/java2days-jaxrs-bundle/1.0-SNAPSHOT</bundle>
     </feature>
