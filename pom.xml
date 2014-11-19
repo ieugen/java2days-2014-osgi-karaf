@@ -15,6 +15,7 @@
         <module>java2days-blueprint-bundle</module>
         <module>java2days-api</module>
         <module>java2days-command-bundle</module>
+        <module>java2days-feature-bundle</module>
     </modules>
 
 </project>
