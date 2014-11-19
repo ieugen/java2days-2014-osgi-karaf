@@ -18,14 +18,22 @@
 -->
 <features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
 
+    <!-- this is available as a pull request
+     https://github.com/hstaudacher/osgi-jax-rs-connector/pull/63
+    -->
+    <repository>mvn:com.eclipsesource.jaxrs/features/0.0.1-SNAPSHOT/xml/features</repository>
+
     <feature name='java2days-app' description='${project.name}' version='${project.version}'>
         <details>${project.description}</details>
         <feature>scr</feature>
-        <!--<feature>blueprint</feature>-->
+        <feature>pax-http-whiteboard</feature>
+        <feature>jax-rs-connector</feature>
+        <feature>jax-rs-provider-moxy</feature>
 
         <bundle>mvn:ieugen.java2days/java2days-api/${project.version}</bundle>
         <bundle>mvn:ieugen.java2days/java2days-bundle/${project.version}</bundle>
         <bundle>mvn:ieugen.java2days/java2days-blueprint-bundle/${project.version}</bundle>
+        <bundle>mvn:ieugen.java2days/java2days-jaxrs-bundle/${project.version}</bundle>
     </feature>
 
     <feature name="java2days-command" description="Adds commands support" version="${project.version}">

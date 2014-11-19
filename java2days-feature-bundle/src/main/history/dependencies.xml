@@ -2,10 +2,13 @@
 <features xmlns="http://karaf.apache.org/xmlns/features/v1.3.0" name="java2days-feature-bundle-1.0-SNAPSHOT">
     <feature version="0.0.0">
         <feature prerequisite="false" dependency="false">java2days-app</feature>
+        <feature prerequisite="false" dependency="false">jax-rs-connector</feature>
+        <feature prerequisite="false" dependency="false">jax-rs-provider-moxy</feature>
         <feature prerequisite="false" dependency="false">scr</feature>
         <bundle>mvn:ieugen.java2days/java2days-api/1.0-SNAPSHOT</bundle>
         <bundle>mvn:ieugen.java2days/java2days-blueprint-bundle/1.0-SNAPSHOT</bundle>
         <bundle>mvn:ieugen.java2days/java2days-bundle/1.0-SNAPSHOT</bundle>
         <bundle>mvn:ieugen.java2days/java2days-command-bundle/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:ieugen.java2days/java2days-jaxrs-bundle/1.0-SNAPSHOT</bundle>
     </feature>
 </features>

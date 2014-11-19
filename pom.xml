@@ -16,6 +16,7 @@
         <module>java2days-command-bundle</module>
         <module>java2days-feature-bundle</module>
     <module>java2days-assembly-bundle</module>
+    <module>java2days-jaxrs-bundle</module>
   </modules>
 
 </project>
